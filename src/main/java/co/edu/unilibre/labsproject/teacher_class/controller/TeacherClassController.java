@@ -16,7 +16,7 @@ public class TeacherClassController {
 	
 	@Autowired(required = true)
 	//@Qualifier("teacherclassServiceFeign")
-	@Qualifier("teacherServiceRestTemplate")
+	@Qualifier("teacherclassServiceRestTemplate")
 	private ITeacherClassService teacherclassService;
 	
 	@GetMapping("/list")
