@@ -15,7 +15,8 @@ import co.edu.unilibre.labsproject.teacher_class.service.ITeacherClassService;
 public class TeacherClassController {
 	
 	@Autowired(required = true)
-	@Qualifier("teacherclassServiceFeign")
+	//@Qualifier("teacherclassServiceFeign")
+	@Qualifier("teacherServiceRestTemplate")
 	private ITeacherClassService teacherclassService;
 	
 	@GetMapping("/list")

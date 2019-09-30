@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 
 import co.edu.unilibre.labsproject.teacher_class.model.Teacher;
 
-@FeignClient(name = "teacher-service", url = "localhost:10030")
+@FeignClient(name = "teacher-service")
 public interface TeacherServiceClientFeign {
 	
 	@GetMapping("/list")

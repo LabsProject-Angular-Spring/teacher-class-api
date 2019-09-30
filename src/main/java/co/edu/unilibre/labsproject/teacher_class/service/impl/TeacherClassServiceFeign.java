@@ -19,7 +19,8 @@ public class TeacherClassServiceFeign implements ITeacherClassService{
 	
 	@Override
 	public List<TeacherClass> getAll() {
-		List<Teacher> teachers = teacherServiceClientFeign.getList();
+		//List<Teacher> teachers = teacherServiceClientFeign.getList();
+		List<Product> teachers = Arrays.asList(clientRest.getForObject("http://teacher-service/list", Teacher[].class));
 		return teachers.stream().map(teacher -> new TeacherClass(teacher, "Class x")).collect(Collectors.toList());
 	}
 

@@ -6,6 +6,7 @@ public class Teacher {
 	private Long id;
 	private String name;
 	private Double salary;
+	private Long port;
 	private Date birthDate;
 	public Long getId() {
 		return id;
@@ -30,5 +31,12 @@ public class Teacher {
 	}
 	public void setBirthDate(Date birthDate) {
 		this.birthDate = birthDate;
+	}
+	
+	public Long getPort() {
+		return port;
+	}
+	public void setPort(Long port) {
+		this.port = port;
 	}
 }
